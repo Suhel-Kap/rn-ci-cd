@@ -50,12 +50,12 @@ jobs:
         run: cd android && chmod +x ./gradlew
         # Build Command
 
-      - name: Build Android ${{inputs.environment == 'release' && 'Release' || 'Debug'}}
+      - name: Build Android APK for testing
         run: |
-          cd android && ./gradlew bundle${{inputs.environment == 'release' && 'Release' || 'Debug'}} --no-daemon
+          cd android && ./gradlew assembleRelease --no-daemon
       # Upload to Artifact
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: RnCiCd.aab
-          path: 'android/app/build/outputs/bundle/release/app-release.aab'
+          name: RnCiCd.apk
+          path: './android/app/build/outputs/apks/release/app-release.apk'
