@@ -95,10 +95,10 @@ android {
 
             if (allFilesFromDir != null) {
                 def keystoreFile = allFilesFromDir.first()
-                keystoreFile.renameTo("keystore/my-signing-key.jks")
+                keystoreFile.renameTo("keystore/keystore.jks")
             }
 
-            storeFile = file("keystore/my-signing-key.jks")
+            storeFile = file("keystore/keystore.jks")
             storePassword System.getenv("KEYSTORE_PASSWORD")
             keyAlias System.getenv("KEY_ALIAS")
             keyPassword System.getenv("KEY_PASSWORD")
