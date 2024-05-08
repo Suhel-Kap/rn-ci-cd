@@ -83,9 +83,7 @@ function App(): React.JSX.Element {
           <Section title="Debug">
             <DebugInstructions />
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
+          <Section title="Learn More">Who reads docs anyway?</Section>
           <LearnMoreLinks />
         </View>
       </ScrollView>
