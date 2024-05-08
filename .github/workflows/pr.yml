@@ -3,7 +3,6 @@ name: Pull Request into Master, Develop and Preprod
 on:
   pull_request:
     branches:
-      - 'main'
       - 'develop'
       - 'preprod'
 
